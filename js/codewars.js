@@ -955,3 +955,8 @@ getMiddle("test"); //should return "es"
 getMiddle("testing"); //should return "t"
 getMiddle("middle"); //should return "dd"
 getMiddle("A"); //should return "A"
+
+
+console.log("-----------------");
+
+console.log(PRESET_COLORS);
