@@ -993,11 +993,11 @@ function gHappy(str) {
 		str = str.replace("g", "");
 		var indexOfThirdG = str.indexOf('g');
 		console.log(indexOfThirdG);
-		if ((indexOfFirstG === indexOfSecondG) && (indexOfSecondG != indexOfThirdG)) {
-			console.log(true);
-		} else {
-			console.log(false);
-		}
+			if ((indexOfFirstG === indexOfSecondG) && (indexOfSecondG != indexOfThirdG)) {
+				console.log(true);
+			} else {
+				console.log(false);
+			}
   	} else if(str.indexOf('g') === -1) {
   		console.log(true);
   	} else {
@@ -1021,6 +1021,23 @@ gHappy("gggggggggg"); //returns true)
 
 
 console.log("------------------");
+
+// Write function makeParts that will take an array as argument and the size of the chunk.
+
+// Example: if an array of size 123 is given and chunk size is 10 there will be 13 parts, 12 of size 10 and 1 of size 3.
+
+function makeParts(arr, chunkSize) {
+	var emptyArray = [];
+	while (arr.length > 0) {
+		emptyArray.push(arr.splice(0, chunkSize));
+	}
+	console.log(emptyArray);
+}
+
+makeParts([1,2,3,4,5], 2); //should return [[1,2],[3,4],[5]])
+makeParts([1,2,3], 1); //should return [[1],[2],[3]])
+makeParts([1,2,3,4,5], 10); //should return [[1,2,3,4,5]])
+
 
 	</script>
 </body>
