@@ -1106,8 +1106,8 @@ console.log("-----------------");
 // true if Arthur need to invite more women, false otherwise.
 
 function inviteMoreWomen(L) {
-		var maleArray = [];
-		var femaleArray = [];
+	var maleArray = [];
+	var femaleArray = [];
 
 	for (var i = 0; i < L.length; i++) {
 		if (L[i] == 1) {
@@ -1131,6 +1131,35 @@ inviteMoreWomen([1, 1, 1]); //should return true)
 inviteMoreWomen([-1, -1, -1]); //should return false)
 
 inviteMoreWomen([1, -1]); //should return false)
+
+
+console.log("-----------------");
+
+
+// Create a function called toTime() that takes an integer argument of seconds and converts the value into a string describing how many hours and minutes comprise that many seconds.
+
+// Any remaining seconds left over are ignored.
+
+// Note:
+// The string output needs to be in the specific form - "X hour(s) and X minute(s)"
+
+function toTime(seconds) {
+	var hours = Math.floor(seconds / 3600);
+	var minutes = ((seconds / 3600) % 1).toFixed(3);
+	console.log(hours);
+	console.log(minutes);
+	var conversionOfDecimal = Math.floor(60 * minutes);
+	console.log(conversionOfDecimal);
+	console.log(hours + " hour(s) and " + conversionOfDecimal + " minute(s)");
+
+}
+
+toTime(3600); //should return '1 hour(s) and 0 minute(s)');
+toTime(3601); //should return '1 hour(s) and 0 minute(s)');
+toTime(3500); //should return '0 hour(s) and 58 minute(s)');
+toTime(323500); //should return '89 hour(s) and 51 minute(s)');
+toTime(0); //should return '0 hour(s) and 0 minute(s)');  
+
 
 
 console.log("-----------------");
