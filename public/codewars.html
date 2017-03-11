@@ -1164,6 +1164,36 @@ toTime(0); //should return '0 hour(s) and 0 minute(s)');
 
 console.log("-----------------");
 
+
+// Round the given number n to the nearest multiple of m.
+
+// If n is exactly in the middle of 2 multiples of m, return n instead.
+// Example
+
+// For n = 20, m = 3, the output should be 21.
+
+// For n = 19, m = 3, the output should be 18.
+
+// For n = 50, m = 100, the output should be 50.
+
+
+function rounding(n, m) {
+	var roundedResult = Math.round(n / m);
+	var nearestNumber = roundedResult * m;
+	var middle = m / n;
+	if (middle == 2) {
+		console.log(n);
+	} else {
+		console.log(nearestNumber);
+	}
+}
+
+rounding(20,3); //should return 21)
+rounding(19,3); //should return 18)
+rounding(1,10); //should return 0)
+rounding(50,100); //should return 50)
+rounding(123,456); //should return 0)
+
 	</script>
 </body>
 </html>
