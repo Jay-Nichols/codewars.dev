@@ -1196,6 +1196,37 @@ rounding(123,456); //should return 0)
 
 console.log("---------------");
 
+
+// For n = 0, the output should be 1.
+
+// For n = 1, the output should be 2.
+
+// For n = 2, the output should be 4.
+
+// For n = 3, the output should be 7.
+
+
+function cakeSlice(n) {
+	var result = 1;
+	for (var i = 0; i < n; i++) {
+		result += (1 + i);
+	}
+	console.log(result);
+
+}
+
+
+cakeSlice(0); //should return 1)
+
+cakeSlice(1); //should return 2)
+
+cakeSlice(2); //should return 4)
+
+cakeSlice(3); //should return 7)
+
+cakeSlice(10); //should return 56)
+
+
 	</script>
 </body>
 </html>
