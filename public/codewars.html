@@ -1444,8 +1444,15 @@ function fizzBuzzCuckooClock(time) {
 	var str = "Cuckoo ";
 
 	function repeat(str, n) {
-		console.log(new Array(n + 1).join(str));
+		var returnedString = "";
+		for (var i = 0; i < n; i++) {
+			returnedString += str;
+		}
+		return returnedString.trim();
 	}
+	// function repeat(str, n) {
+	// 	console.log(new Array(n + 1).join(str));
+	// }
 
 	if (hour > 12) {
 		var n = hour - 12;
@@ -1458,7 +1465,7 @@ function fizzBuzzCuckooClock(time) {
 	if (minutes == "30") {
 		console.log("Cuckoo");
 	} else if (minutes == "00") {
-		repeat(str, n);
+		console.log(repeat(str, n));
 	} else if (minutes % 3 == 0 & minutes % 5 == 0) {
  		console.log("Fizz Buzz");
  	} else if (minutes % 3 == 0) {
