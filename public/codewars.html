@@ -1385,7 +1385,7 @@ function lateRide(n) {
   } else {
   	var hour = (n / 60);
   	var hourRounded = Math.floor(hour);
-  	var minutes = Math.floor((hour - Math.floor(hour)) * 60);
+  	var minutes = Math.round((hour - hourRounded) * 60);
   		var hourString = hourRounded.toString();
   		var sumOfHour = 0;
   		var minuteString = minutes.toString();
@@ -1410,6 +1410,78 @@ lateRide(1439); //should return  19)
 lateRide(0); //should return  0)
 lateRide(23); //should return  5)
 lateRide(8); //should return  8)
+
+console.log("--------------");
+
+// Your plan
+
+// When a minute is evenly divisible by three, the clock will say the word "Fizz".
+// When a minute is evenly divisible by five, the clock will say the word "Buzz".
+// When a minute is evenly divisible by both, the clock will say "Fizz Buzz", with two exceptions:
+// On the hour, instead of "Fizz Buzz", the clock door will open, and the cuckoo bird will come out and "Cuckoo" between one and twelve times depending on the hour.
+// On the half hour, instead of "Fizz Buzz", the clock door will open, and the cuckoo will come out and "Cuckoo" just once.
+// With minutes that are not evenly divisible by either three or five, at first you had intended to have the clock just say the numbers ala Fizz Buzz, but then you decided at least for version 1.0 to just have the clock make a quiet, subtle "tick" sound for a little more clock nature and a little less noise.
+// Your input will be a string containing hour and minute values in 24-hour time, separated by a colon, and with leading zeros. For example, 1:34 pm would be "13:34".
+
+// Your return value will be a string containing the combination of Fizz, Buzz, Cuckoo, and/or tick sounds that the clock needs to make at that time, separated by spaces. Note that although the input is in 24-hour time, cuckoo clocks' cuckoos are in 12-hour time.
+
+// Some examples
+
+// "13:34"       "tick"
+// "21:00"       "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"
+// "11:15"       "Fizz Buzz"
+// "03:03"       "Fizz"
+// "14:30"       "Cuckoo"
+// "08:55"       "Buzz"
+// "00:00"       "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"
+// "12:00"       "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"
+
+
+function fizzBuzzCuckooClock(time) {
+	var minutes = (time[3] + time[4]);
+	var hour = (time[0] + time[1]);
+	var counter = 0;
+	var str = "Cuckoo ";
+
+	function repeat(str, n) {
+		console.log(new Array(n + 1).join(str));
+	}
+
+	if (hour > 12) {
+		var n = hour - 12;
+	} else if (hour == "00" || hour == "12") {
+		n = 12;
+	} else {
+		n = hour;
+	}
+
+	if (minutes == "30") {
+		console.log("Cuckoo");
+	} else if (minutes == "00") {
+		repeat(str, n);
+	} else if (minutes % 3 == 0 & minutes % 5 == 0) {
+ 		console.log("Fizz Buzz");
+ 	} else if (minutes % 3 == 0) {
+ 		console.log("Fizz");
+ 	} else if (minutes % 5 == 0) {
+ 		console.log("Buzz");
+ 	} else if (minutes == 30) {
+ 		console.log("Cuckoo");
+ 	} else {
+ 		console.log("tick");
+ 	}
+ 	
+}
+
+fizzBuzzCuckooClock("13:34"); //should return "tick");
+fizzBuzzCuckooClock("21:00"); //should return "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo");
+fizzBuzzCuckooClock("11:15"); //should return "Fizz Buzz");
+fizzBuzzCuckooClock("03:03"); //should return "Fizz");
+fizzBuzzCuckooClock("14:30"); //should return "Cuckoo");
+fizzBuzzCuckooClock("08:55"); //should return "Buzz");
+fizzBuzzCuckooClock("00:00"); //should return "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo");
+fizzBuzzCuckooClock("12:00"); //should return "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo");
+
 
 
 	</script>
