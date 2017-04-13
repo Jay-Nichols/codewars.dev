@@ -1717,7 +1717,7 @@ console.log("---------------");
 // You will only be given integers types - however negative values (edge cases) will be given.
 
 function animals(heads, legs){
-	var cows = (legs / 2) - heads ;
+	var cows = (legs / 2) - heads;
 	var chickens = heads - cows;
 	if (heads < 0 || legs < 0 || cows < 0 || chickens < 0 || (legs % 2 == 1)) {
 		console.log("No solutions");
@@ -1750,6 +1750,43 @@ animals(-45, 5); //should return "No solutions")
 animals(500, 0); //should return "No solutions")
 animals(0, 500); //should return "No solutions")
 animals(5, -55); //should return "No solutions")
+
+
+console.log("---------------");
+
+// Invert a given list of integer values.
+
+// Python/JS/PHP:
+
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
+// You can assume that all values are integers.
+
+function invert(array) {
+	var invertedArray = [];
+	for (var i = 0; i < array.length; i++) {
+		if (array[i] > 0) {
+			invertedArray.push(parseInt("-" + array[i]));
+		} else if (array[i] < 0) {
+			invertedArray.push(Math.abs(array[i]));
+		} else if (array[i] == 0) {
+			invertedArray.push(array[i]);
+		} else {
+			invertedArray.push("");
+		}
+	}
+
+	console.log(invertedArray);
+}
+
+
+
+
+invert([1,2,3,4,5]); //should return [-1,-2,-3,-4,-5]);
+invert([1,-2,3,-4,5]); //should return [-1,2,-3,4,-5]);
+invert([]); //should return []);
+invert([0]); //should return [0]);
 
 
 
