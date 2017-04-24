@@ -340,7 +340,7 @@ function minMax(arr){
 	console.log("--------");
   var resultsArray = [];
   var inNumericOrder = arr.sort(function(a,b) {
-  	return a - b;
+	return a - b;
   });
   console.log(inNumericOrder);
   var lowestNumber = inNumericOrder[0];
@@ -429,11 +429,11 @@ function feuerFrei(concentration, barrels) {
 	var hoursOfFuel = concentration * barrels;
 	var hoursOfFuelNeeded = 100 - hoursOfFuel;
   if (hoursOfFuel < 100) {
-  	console.log(hoursOfFuelNeeded + " Stunden mehr Benzin benötigt.")
+	console.log(hoursOfFuelNeeded + " Stunden mehr Benzin benötigt.")
   } else if (hoursOfFuel > 100) {
-  	console.log(hoursOfFuel);
+	console.log(hoursOfFuel);
   } else {
-  	console.log("Perfekt");
+	console.log("Perfekt");
   }
 }
 
@@ -447,11 +447,11 @@ feuerFrei(3,20);
  // Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
  function even_or_odd(number) {
- 	if (number % 2 == 0) {
- 		console.log("Even");
- 	} else {
- 		console.log("Odd");
- 	}
+	if (number % 2 == 0) {
+		console.log("Even");
+	} else {
+		console.log("Odd");
+	}
 }
 
 even_or_odd(2);
@@ -555,11 +555,11 @@ console.log("---------------------");
 
 function transposeTwoStrings(arr){
    var s1 = arr[0], 
-       s2 = arr[1], 
-       l = Math.max(s1.length, s2.length), 
-       r = [];
+	   s2 = arr[1], 
+	   l = Math.max(s1.length, s2.length), 
+	   r = [];
    for (var i = 0; i < l; i++) {
-      r.push((s1[i]||' ') + ' ' + (s2[i]||' '));
+	  r.push((s1[i]||' ') + ' ' + (s2[i]||' '));
    }
    console.log(r.join('\n'));
 }
@@ -759,19 +759,19 @@ console.log("----------------");
 
 function multi(arr) {
 	console.log(arr[0] * arr[1] * arr[2]);
-  	
+	
 }
 function add(arr) {
-  	console.log(arr[0] + arr[1] + arr[2]);
+	console.log(arr[0] + arr[1] + arr[2]);
 }
 function reverse(str) {
 	console.log(str.split("").reverse().join(""));
-  	// var splitString = str.split("");
-  	// console.log(splitString);
-  	// var reverseArray = splitString.reverse();
-  	// console.log(reverseArray);
-  	// var joinedArray = reverseArray.join("");
-  	// console.log(joinedArray);
+	// var splitString = str.split("");
+	// console.log(splitString);
+	// var reverseArray = splitString.reverse();
+	// console.log(reverseArray);
+	// var joinedArray = reverseArray.join("");
+	// console.log(joinedArray);
 }
 
 multi([5, 1, 5]); //should equal 25);
@@ -907,9 +907,9 @@ console.log("-----------------");
 
 function reverseLetter(str) {
 	var reversedString = (str.split("").reverse().join(""));
-  	
-  	var replacedNonInteger = reversedString.replace(/\s+/g, '-').replace(/[^a-zA-Z-]/g, '');
-  	console.log(replacedNonInteger);
+	
+	var replacedNonInteger = reversedString.replace(/\s+/g, '-').replace(/[^a-zA-Z-]/g, '');
+	console.log(replacedNonInteger);
   
 }
 
@@ -998,11 +998,11 @@ function gHappy(str) {
 			} else {
 				console.log(false);
 			}
-  	} else if(str.indexOf('g') === -1) {
-  		console.log(true);
-  	} else {
-  		console.log(false);
-  	}
+	} else if(str.indexOf('g') === -1) {
+		console.log(true);
+	} else {
+		console.log(false);
+	}
 }
 
 gHappy("gg0gg3gg0gg"); //returns true)
@@ -1260,8 +1260,8 @@ function shuffledArray(arr){
 		return a - b;
 	}
 	var sortedArray = arr.sort(sortArray);
- 	sortedArray.pop();
- 	console.log(sortedArray);
+	sortedArray.pop();
+	console.log(sortedArray);
 
 }
 
@@ -1342,9 +1342,9 @@ console.log("----------------");
 // addThree(3); // 6
 
 function add(n) {
- 	function innerAdd(o) {
- 		console.log(n + o);
- 	}
+	function innerAdd(o) {
+		console.log(n + o);
+	}
 }
 
 
@@ -1375,31 +1375,31 @@ console.log("-----------------");
 
 function lateRide(n) {
   if (n < 60) {
-  		var str = n.toString();
-  		var sum = 0;
+		var str = n.toString();
+		var sum = 0;
 
-  		for (var i = 0; i < str.length; i++){
-  			sum += parseInt(str.charAt(i), 10);
-  		}
-  		console.log(sum);
+		for (var i = 0; i < str.length; i++){
+			sum += parseInt(str.charAt(i), 10);
+		}
+		console.log(sum);
   } else {
-  	var hour = (n / 60);
-  	var hourRounded = Math.floor(hour);
-  	var minutes = Math.round((hour - hourRounded) * 60);
-  		var hourString = hourRounded.toString();
-  		var sumOfHour = 0;
-  		var minuteString = minutes.toString();
-  		var sumOfMinutes = 0;
+	var hour = (n / 60);
+	var hourRounded = Math.floor(hour);
+	var minutes = Math.round((hour - hourRounded) * 60);
+		var hourString = hourRounded.toString();
+		var sumOfHour = 0;
+		var minuteString = minutes.toString();
+		var sumOfMinutes = 0;
 
-  		for (var i = 0; i < hourString.length; i++) {
-  			sumOfHour += parseInt(hourString.charAt(i), 10);
-  		}
+		for (var i = 0; i < hourString.length; i++) {
+			sumOfHour += parseInt(hourString.charAt(i), 10);
+		}
 
-  		for (var i = 0; i < minuteString.length; i++) {
-  			sumOfMinutes += parseInt(minuteString.charAt(i), 10);
-  		}
+		for (var i = 0; i < minuteString.length; i++) {
+			sumOfMinutes += parseInt(minuteString.charAt(i), 10);
+		}
 
-  		console.log(sumOfHour + sumOfMinutes);
+		console.log(sumOfHour + sumOfMinutes);
   }
   
 }
@@ -1467,15 +1467,15 @@ function fizzBuzzCuckooClock(time) {
 	} else if (minutes == "00") {
 		console.log(repeat(str, n));
 	} else if (minutes % 3 == 0 & minutes % 5 == 0) {
- 		console.log("Fizz Buzz");
- 	} else if (minutes % 3 == 0) {
- 		console.log("Fizz");
- 	} else if (minutes % 5 == 0) {
- 		console.log("Buzz");
- 	} else {
- 		console.log("tick");
- 	}
- 	
+		console.log("Fizz Buzz");
+	} else if (minutes % 3 == 0) {
+		console.log("Fizz");
+	} else if (minutes % 5 == 0) {
+		console.log("Buzz");
+	} else {
+		console.log("tick");
+	}
+	
 }
 
 fizzBuzzCuckooClock("13:34"); //should return "tick");
@@ -1571,21 +1571,21 @@ console.log("--------------");
 function bearDollars(arr) {
 	var addItUp = 0;
 	arr.forEach(function (innerArray) {
-  		var closeFriendCharge = innerArray[0] * 25;
-  		var friendCharge = innerArray[0] * 50;
-  		var acquaintanceCharge = innerArray[0] * 100;
-   		var othersCharge = innerArray[0] * 125;
-   		var total = closeFriendCharge + friendCharge + acquaintanceCharge + othersCharge;
-  	if (innerArray[1] == 'Close Friend') {
-  		console.log(closeFriendCharge);
-  	} else if (innerArray[1] == 'Friend') {
-  		console.log(friendCharge);
-  	} else if (innerArray[1] == 'Acquaintance') {
-  		console.log(acquaintanceCharge);
-   	} else {
-   		console.log(othersCharge);
-   	}
-  		
+		var closeFriendCharge = innerArray[0] * 25;
+		var friendCharge = innerArray[0] * 50;
+		var acquaintanceCharge = innerArray[0] * 100;
+		var othersCharge = innerArray[0] * 125;
+		var total = closeFriendCharge + friendCharge + acquaintanceCharge + othersCharge;
+	if (innerArray[1] == 'Close Friend') {
+		console.log(closeFriendCharge);
+	} else if (innerArray[1] == 'Friend') {
+		console.log(friendCharge);
+	} else if (innerArray[1] == 'Acquaintance') {
+		console.log(acquaintanceCharge);
+	} else {
+		console.log(othersCharge);
+	}
+		
   });
 
 }
@@ -1803,15 +1803,31 @@ console.log("---------------");
 
 // Note: Always return a boolean value, even if there're no negations.
 
+// function negationValue(string, value) {
+//   // var string = string.replace(/"/g,"");
+//   // var evaluate = string + value;
+//  if (string.length % 2 === 1) {
+//  	console.log(!value.valueOf());
+//  } else {
+//  	console.log(value.valueOf());
+//  }
+// }
+
 function negationValue(string, value) {
-  // var string = string.replace(/"/g,"");
-  // var evaluate = string + value;
- if (string.length % 2 === 1) {
- 	console.log(!value);
- } else {
- 	console.log(value);
- }
+	if (string.length % 2 === 1) {
+		console.log(!(value.valueOf()));
+ 	} else if (value.valueOf() == -1) {
+		console.log(false);
+ 	} else if (value.valueOf() == 1) {
+  		console.log(true);
+  	} else if (value.valueOf() == null) {
+  		console.log(false);
+ 	} else {
+   		console.log(true);
+	}
 }
+
+
 
 
 
