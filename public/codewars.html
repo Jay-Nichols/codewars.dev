@@ -1936,6 +1936,28 @@ function getCount(str) {
 getCount("abracadabra"); //should return 5)
 
 
+console.log("-------------");
+
+
+// Write a function called repeatStr which repeats the given string string exactly n times.
+
+// repeatStr(6, "I") // "IIIIII"
+// repeatStr(5, "Hello") // "HelloHelloHelloHelloHello
+
+function repeatStr (n, s) {
+	var repeatedString = '';
+	for (var i = 0; i < n; i++) {
+		repeatedString += s;
+	}
+	console.log(repeatedString);
+}
+
+
+repeatStr(3, "*"); //should return "***");
+repeatStr(5, "#"); //should return "#####");
+repeatStr(2, "ha "); //should return "ha ha ");
+
+
 	</script>
 </body>
 </html>
