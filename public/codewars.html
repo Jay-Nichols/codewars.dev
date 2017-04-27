@@ -1854,6 +1854,7 @@ console.log("------------------");
 
 function strangeCoach(players) {
 	var letterArray = [];
+	players.sort();
  	players.forEach(function (player) {
  		console.log(letterArray.push(player[0]));
 
@@ -1912,6 +1913,27 @@ strangeCoach([
  "snwrclyjkbspysjftcmyak", 
  "eelrsgkuhu", 
  "dnyzsvqjjuqoc"]); //should return "b"
+
+
+console.log("-----------------");
+
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, and u as vowels for this Kata.
+
+function getCount(str) {
+  var arrayString = str.split('');
+  var vowelArray = [];
+  arrayString.forEach(function (letter) {
+  	if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u") {
+  		vowelArray.push(letter);
+  	}
+  });
+  console.log(vowelArray.length); 
+}
+
+
+getCount("abracadabra"); //should return 5)
 
 
 	</script>
