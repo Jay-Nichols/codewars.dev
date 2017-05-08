@@ -1957,6 +1957,62 @@ repeatStr(3, "*"); //should return "***");
 repeatStr(5, "#"); //should return "#####");
 repeatStr(2, "ha "); //should return "ha ha ");
 
+console.log("--------------");
+
+
+
+// Let's call a string cool if it is formed only by Latin letters and no two lowercase and no two uppercase letters are in adjacent positions. Given a string, check if it is cool.
+
+// Input/Output
+
+// [input] string s
+
+// A string that contains uppercase letters, lowercase letters numbers and spaces.
+
+// 1 ≤ s.length ≤ 20.
+
+// [output] a boolean value
+
+// true if s is cool, false otherwise.
+
+// Example
+
+// For s = "aQwFdA", the output should be true
+
+// For s = "aBC", the output should be false;
+
+// For s = "AaA", the output should be true;
+
+// For s = "q q", the output should be false.
+
+function coolString(s) {
+	for (var i = 0; i < s.length; i++){
+		if ((i == 0 && s[0] == s[0].toUpperCase()) && (i % 2 == 0 && s[i] == s[i].toUpperCase()) && (i % 2 != 0  && s[i].toLowerCase())) {
+			console.log(true);
+		}
+	}
+}
+
+// function coolString(s) {
+// 	for (var i = 0; i < s.length; i++) {
+		
+// 	}
+// }
+
+
+coolString("AaA"); //should return true)
+
+coolString("q q"); //should return false)
+
+coolString("wWw1"); //should return false)
+
+coolString("2"); //should return false)
+
+coolString("aAaAaAa"); //should return true)
+
+coolString("    "); //should return false)
+
+
 
 	</script>
 </body>
