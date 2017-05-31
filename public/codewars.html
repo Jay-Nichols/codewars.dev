@@ -1983,11 +1983,25 @@ function counterEffect(hitCount) {
 		while (j <= element) {
 			innerArray.push(j);
 			j++;
-		}
-	
+		}			
 	})
 	console.log(innerArray);
 }
+
+
+// function counterEffect(hitCount) {
+// 	var hitCountArray = hitCount.split("");
+// 	var innerArray = [];
+// 	var bigArray = [];
+// 	for (var i = 0; i < hitCountArray.length; i++) {
+// 		var j = 0;
+// 		while (j <= hitCountArray[i]) {
+// 			innerArray.push(j);
+// 			j++;
+// 		}
+// 	}
+// 	console.log(innerArray);
+// }
 
 counterEffect("1250"); //should return [[0,1],[0,1,2],[0,1,2,3,4,5],[0]]);
 counterEffect("0050"); //should return [[0],[0],[0,1,2,3,4,5],[0]]);
@@ -1995,7 +2009,59 @@ counterEffect("0000"); //should return [[0],[0],[0],[0]]);
 
 console.log("--------------");
 
+// No self respecting traveller would leave Indonesia without buying a vest sporting the logo of their national beer. I mean, you don't want to offend anyone do you?? Good, I thought not.
 
+// The thing is, although they are sold absolutely everywhere, it's hard to know if you are being ripped off on price. (let's not discuss being ripped off on fashion...).
+
+// So you need to practice your haggling skills. As I understand it there are four methods: light haggle, medium haggle, strong haggle and walk away swearing until you get chased down the street and offered one half price.
+
+// So, given the price of the vest (price) and the haggling strategy (haggle), return the relevant price with discount applied as follows:
+
+// light = 20% medium = 30% heavy = 40% walkandswear = 90%
+
+// If the haggle value is anything other than those specified, you will have offended someone, return 'Run!!'
+
+// Prices are all in Rupia
+
+function vestBuy(price, haggle){
+
+	switch (haggle) {
+		case "light":
+			console.log((price) - (price * .2));
+			break;
+		case "medium":
+			console.log((price) - (price * .3));
+			break;
+		case "heavy":
+			console.log((price) - (price * .4));
+			break;
+		case "walkandswear":
+			console.log((price) - (price * .9));
+			break;
+		default:
+			console.log("Run!!");
+	}
+	// if (haggle == 'light') {
+	// 	console.log((price) - (price * .2));
+	// } else if (haggle == 'medium') {
+	// 	console.log((price) - (price * .3));
+	// } else if (haggle == 'heavy') {
+	// 	console.log((price) - (price * .4));
+	// } else if (haggle == 'walkandswear') {
+	// 	console.log((price) - (price * .9));
+	// } else {
+	// 	console.log('Run!!');
+	// }
+}
+
+
+
+vestBuy(70000, 'light'); //should return 56000);
+vestBuy(30000, 'medium'); //should return 21000); 
+vestBuy(800000, 'walkandswear'); //should return 80000); 
+
+
+console.log("--------------");
 
 
 	</script>
