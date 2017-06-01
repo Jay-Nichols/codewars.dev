@@ -2107,6 +2107,26 @@ sabb('Please calm down', 9, 1); //should return  'Back to your desk, boy.');
 
 console.log("--------------");
 
+// Your are given a string. You must replace the word(s) coverage by covfefe, however, if you don't find the word coverage in the string, you must add it at the end of the string.
+
+function covfefe(str){
+	if (str.search('coverage') >= 0) {
+		console.log(str.replace(/coverage/g, "covfefe"));
+	} else {
+		console.log(str + " covfefe");
+	}
+}
+
+
+covfefe("coverage"); //"covfefe");
+covfefe("coverage coverage"); //"covfefe covfefe");
+covfefe("nothing"); //"nothing covfefe");
+covfefe("double space "); //"double space  covfefe");
+covfefe("covfefe"); //"covfefe covfefe");
+
+
+console.log("--------------");
+
 
 	</script>
 </body>
