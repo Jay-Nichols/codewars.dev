@@ -2150,6 +2150,60 @@ cubeOdd([-3,-2,2,3]); //should return 0);
 cubeOdd(["a",12,9,"z",42]); //should return undefined);
 
 console.log("--------------");
+// If you like Taco Bell, you will be familiar with their signature doritos locos taco. They're very good.
+
+// Why can't everything be a taco? We're going to attempt that here, turning every word we find into the taco bell recipe with each ingredient.
+
+// We want to input a word as a string, and return a list representing that word as a taco.
+
+// Key
+
+// all vowels = beef
+
+// t = tomato
+
+// l = lettuce
+
+// c = cheese
+
+// g = guacamole
+
+// s = salsa
+
+function tacofy(word) {
+	var tacoArray = ['shell', 'shell'];
+	if (word != "") {
+		for (var i = 0; i < word.length; i++) {
+			if (word[i] == 'a' || word[i] == 'e' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u') {
+				tacoArray.splice(tacoArray.length - 1, 0, 'beef');
+			} else if (word[i] == 't') {
+				tacoArray.splice(tacoArray.length - 1, 0, 'tomato');
+			} else if (word[i] == 'l') {
+				tacoArray.splice(tacoArray.length - 1, 0, 'lettuce');
+			} else if (word[i] == 'c') {
+				tacoArray.splice(tacoArray.length - 1, 0, 'cheese');
+			} else if (word[i] == 'g') {
+				tacoArray.splice(tacoArray.length - 1, 0, 'guacamole');
+			} else if (word[i] == 't') {
+				tacoArray.splice(tacoArray.length - 1, 0, 'salsa');
+			}
+		}
+		console.log(tacoArray);
+	} else {
+		console.log(tacoArray);
+	}
+}
+
+
+tacofy(""); // should return ['shell', 'shell'])
+tacofy("a"); // should return  ['shell', 'beef', 'shell'])
+tacofy("ggg"); // should return  ['shell', 'guacamole', 'guacamole', 'guacamole', 'shell'])
+tacofy("ogl"); // should return ['shell', 'beef', 'guacamole', 'lettuce', 'shell'])
+tacofy("ydjkpwqrzto"); // should return  ['shell', 'tomato', 'beef', 'shell'])
+
+
+
+console.log("--------------");
 
 
 	</script>
