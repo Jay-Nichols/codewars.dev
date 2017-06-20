@@ -2172,19 +2172,19 @@ console.log("--------------");
 
 function tacofy(word) {
 	var tacoArray = ['shell', 'shell'];
-	if (word != "") {
+	if (word !== "") {
 		for (var i = 0; i < word.length; i++) {
-			if (word[i] == 'a' || word[i] == 'e' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u') {
+			if (word[i].toLowerCase() == 'a' || word[i].toLowerCase() == 'e' || word[i].toLowerCase() == 'i' || word[i].toLowerCase() == 'o' || word[i].toLowerCase() == 'u') {
 				tacoArray.splice(tacoArray.length - 1, 0, 'beef');
-			} else if (word[i] == 't') {
+			} else if (word[i].toLowerCase() == 't') {
 				tacoArray.splice(tacoArray.length - 1, 0, 'tomato');
-			} else if (word[i] == 'l') {
+			} else if (word[i].toLowerCase() == 'l') {
 				tacoArray.splice(tacoArray.length - 1, 0, 'lettuce');
-			} else if (word[i] == 'c') {
+			} else if (word[i].toLowerCase() == 'c') {
 				tacoArray.splice(tacoArray.length - 1, 0, 'cheese');
-			} else if (word[i] == 'g') {
+			} else if (word[i].toLowerCase() == 'g') {
 				tacoArray.splice(tacoArray.length - 1, 0, 'guacamole');
-			} else if (word[i] == 't') {
+			} else if (word[i].toLowerCase() == 's') {
 				tacoArray.splice(tacoArray.length - 1, 0, 'salsa');
 			}
 		}
